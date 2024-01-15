@@ -31,13 +31,14 @@
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
         <executor id="BilboRunExecutor" implementation="com.stellariver.bilbo.BilboRunExecutor"/>
-        <programRunner id="BilboDebuggerRunner" implementation="com.stellariver.bilbo.BilboDebuggerRunner" order="first"/>
+        <programRunner id="BilboDebusssggerRunner" implementation="com.stellariver.bilbo.BilboDebuggerRunner" order="first"/>
         <applicationConfigurable parentId="tools" instance="com.stellariver.bilbo.BilboSettingsConfigurable"
                                  id="com.stellariver.bilbo.BilboSettingsConfigurable"
                                  groupId="tools"
                                  nonDefaultProject="true"
                                  displayName="Bilbo Setting"/>
         <applicationService serviceImplementation="com.stellariver.bilbo.BilboSettingState"/>
+        <notificationGroup id="bilboNotificationGroup" displayType="TOOL_WINDOW" toolWindowId="BilboRunExecutor" isLogByDefault="true"/>
     </extensions>
     <actions>
         <action id="BilboExecutorAction"
